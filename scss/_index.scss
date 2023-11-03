@@ -1,0 +1,132 @@
+$blanco: #E0E0E0;
+$gris: #787878;
+$grisoscuro: #363636;
+$negro: #050505;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    display: flex;  
+    flex-direction: column;
+}
+
+
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: $negro;  
+    p{ 
+        margin-top: 10px;
+        color: $blanco;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .img-fondo{
+        flex-direction: column;
+        height: 90px;
+    }
+}
+
+/*---------------------INDEX---------------------*/
+
+.index {
+    padding-top: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+  
+    h1 {
+      font-weight: bold;
+      font-size: 3.5rem;
+      text-align: center;
+      color: $blanco;
+      text-shadow: 1px 2px 100px $negro;
+    }
+  
+    p {
+      font-size: 1.5rem;
+      text-align: center;
+      color: $blanco;
+      font-weight: lighter;
+      font-style: italic;
+      text-shadow: 2px 2px 5px $negro;
+    }
+  
+    .boton-index {
+      cursor: pointer;
+      display: inline-block;
+      border: none;
+      height: 40px;
+      border-radius: 8px;
+      width: 160px;
+      font-weight: 900;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: $negro;
+      transition: 150ms;
+      margin-top: 30px;
+      box-shadow: inset 0.2rem 0.2rem 1.5rem $gris;
+  
+      &:focus {
+        outline: none;
+      }
+  
+      &:hover {
+        transform: translate(0, -5px);
+        background-color: $negro;
+        color: $blanco;
+        box-shadow: inset 0.2rem 0.2rem 1.5rem $grisoscuro;
+      }
+    }
+  }
+  
+  #hero {
+    min-height: 100vh;
+    position: relative;
+  
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .capa {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $negro;
+      opacity: 0.5;
+    }
+  }
+  
